@@ -60,3 +60,9 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+#dtree figures
+dtree/
+cc_benefit.html
+ms_cost.html
+accuracy.html
