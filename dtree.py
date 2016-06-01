@@ -20,9 +20,7 @@ def display(dtree,visualization):
 			display(l,visualization)
 
 def preprocess(data):
-	#globalFunc.calculate_attr_TC(data)
 	for column in data.columns:
-		data[column].fillna(data[column].value_counts().idxmax(), inplace=True)
 		if(len(data[column].unique()) <= 13):
 			data[column] = data[column].astype(object)
 	equiv = {1:'good',2:'bad'}

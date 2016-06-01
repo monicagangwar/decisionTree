@@ -3,7 +3,6 @@
 from __future__ import division
 import pandas
 import math
-import numpy as np
 
 def calculate_info_d(data):
 	dem = (len(data))
@@ -87,6 +86,7 @@ def calculate_sum_gain(data):
 		gain,sp = calculate_information_gain(data,attribute,info_d)
 		sum_gain += gain
 	return gain
+
 def calculate_ucb(data):
 	p = len(data[data['target'] == pos_target])
 	n = len(data[data['target'] == neg_target])
@@ -116,7 +116,6 @@ def ASF_for_nominal_attribute(data,attribute,gain,ucb):
 	for value in data[attribute].unique():
 		ucb_all += calculate_ucb(data[data[attribute] == value])
 	incr_ucb = ucb_all - ucb
-	#ASF = ((math.pow(2,gain) - 1) * (incr_ucb) ) /(TC[attribute])
 	ASF = ((math.pow(2,gain) - 1) * (incr_ucb) )
 	return ASF,incr_ucb,None
 
@@ -127,7 +126,6 @@ def calculate_ASF_at_split_point(data,attribute,split_point,gain,ucb):
 	partition = data[data[attribute] > split_point]
 	ucb_all += calculate_ucb(partition)
 	incr_ucb = ucb_all - ucb
-	#ASF = ((math.pow(2,gain) - 1) * (incr_ucb) ) /(TC[attribute])
 	ASF = ((math.pow(2,gain) - 1) * (incr_ucb) ) 
 	return ASF,incr_ucb
 

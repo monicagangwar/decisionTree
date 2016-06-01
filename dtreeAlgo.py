@@ -44,7 +44,6 @@ def CBDSDT(data):
 		if attribute != 'target' and len(data[attribute].unique()) > 1:
 			gain,sp = globalFunc.calculate_information_gain(data,attribute,info_d) 
 			ASF,incr_ucb,temp_split_point = globalFunc.calculate_ASF_incr_ucb(data,attribute,gain/sum_gain,ucb)
-			#print attribute,ASF
 			if ASF > max_ASF:
 				splitting_attribute = attribute
 				max_ASF = ASF
@@ -54,7 +53,6 @@ def CBDSDT(data):
 				mac_incr_ucb = incr_ucb
 				splitting_attribute = attribute
 				split_point = temp_split_point
-	#print '!!',splitting_attribute,max_ASF
 	return splitting_attribute,split_point
 
 
