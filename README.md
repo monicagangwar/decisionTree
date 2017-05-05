@@ -24,4 +24,6 @@ Decision trees are stored in folder `dtree`
 
 
 ### Comparison Graphs
-![alt text](https://github.com/monicagangwar/decisionTree/blob/master/accuracy.html) 
+![accuracy](https://cloud.githubusercontent.com/assets/8946358/25762646/38aea592-31fd-11e7-8ca8-b616debf9632.png)  
+![misclassification cost](https://cloud.githubusercontent.com/assets/8946358/25762844/ffb33e78-31fd-11e7-98f2-c38ff41a7784.png)  
+![correct classification cost](https://cloud.githubusercontent.com/assets/8946358/25762845/0257a36c-31fe-11e7-8480-bac18b2cff86.png)  
